@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Counter</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logcont">
+        <div class="stopwatchcont">
+            <div class="currtime" id="displaytime">00:00:00:00</div>
+            <div class="buttons">
+                <button class="start btnformat" id="start">Start</button>
+                <button class="stop btnformat" id="stop"> Stop</button>
+            </div>
+        </div>
+
+        <div class="logtablecont">
+            
+            <div class="logtable">
+                <div class="logtitle">Logs</div>
+                <div class="log" id="log1"> 1.  <div id="logtext"></div> <button id="clearlog1"></button></div>
+                <div class="log" id="log2"> 2.  <div id="logtext"></div> <button id="clearlog2"></button></div>
+                <div class="log" id="log3"> 3.  <div id="logtext"></div> <button id="clearlog3"></button></div>
+                <div class="log" id="log4"> 4.  <div id="logtext"></div> <button id="clearlog4"></button></div>
+                <div class="log" id="log5"> 5.  <div id="logtext"></div> <button id="clearlog5"></button></div>
+            </div>
+
+            <div class="logbuttons">
+                <button class="clear btnformat" id="clear">Clear</button>
+                <div class="total" id="total"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="notescont">
+
+        <div class="clockcont" id="clockcont">
+            <canvas class="canvas" id="canvas"></canvas>
+        </div>
+
+        <div class="tempcont" id="tempcont"></div>
+
+       <div class="notepadcont" id="notepadcont"> 
+            <h3>notepad</h3>
+            <textarea id="textarea"></textarea>
+        </div>
+    </div>
+    
+    <script type="module" src="time.js"></script>
+    <script type="module" src="clock.js"></script>
+    <script type="module" src="js.js"></script>
+</body>
+</html>

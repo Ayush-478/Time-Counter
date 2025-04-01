@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    width: 100;
+    height: 100%;
+    background-color: #560f15;
+    display: flex;
+    font-family: "Josefin Sans", sans-serif;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.logcont{
+    width: 30%;  /*formerly 37%*/
+    height: 93%; /*formerly, 100%*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    right: -.9%;
+}
+
+.stopwatchcont{
+    background-color: #ffbe31;
+    border: 1px solid palevioletred;
+    width: 102%;
+    height: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currtime{
+    font-size: 5.5vw;
+    text-align: center;
+    color: #31112c;
+    width: 100%;
+    position: relative;
+    bottom: -5%;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons > button{
+    height: 125%;
+    width:33%;
+    position: relative;
+    top: -70%;
+}
+
+.start{
+    font-weight: 500;
+    font-size: 3vw;
+    color: pink;
+    background-color: #31112c;
+    right: -5%;
+}
+
+.stop{
+    font-weight: 500;
+    font-size: 3vw;
+    background-color: #31112c;
+    color: #fbdcc4;
+    grid-area: 2 / 3/ span 1/ span 1;
+    left: -5%;
+}
+
+.logtablecont{    /*contains log table, clear and total*/
+    height: 62%;
+    width: 100%;
+    border: 1px solid skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logtitle{
+    font-size: 3vw;
+    font-weight: 500;
+    color: #210324;
+    text-align: center;
+}
+
+.logtable{
+    background-color: #ffbe31;
+    grid-area: 3/1/ span 1/ span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.log{
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.65vw;
+}
+
+.log > div{
+    margin-left: 1rem;
+    margin-right: auto;
+}
+
+.log > button{
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #5d1861;
+}
+
+.logbuttons{                /*clear and total*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffbe31;
+    height: 18%;
+}
+
+.clear{
+    font-weight: 500;
+    font-size: 2.5vw;
+    background-color: #210324;
+    color: #fbdcc4;
+    height: 85%;
+    width: 33%;
+    border: none;
+    position: relative;
+    top: -18%;
+    right: -4%;
+}
+
+.total{
+    font-weight: 500;
+    font-size: 2.5vw;
+    background-color: #210324;
+    color: white;    
+    height: 85%;
+    width: 45%;
+    text-align: center;
+    position: relative;    
+    left: -4%;
+    top: -18%;
+
+}
+
+.notescont{ 
+    width: 61.5%; /*formerly, 63%*/
+    height: 92%;
+    display: grid;
+    grid-template-rows: 1.34fr 2.66fr;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+
+.clockcont{
+    height: 100%;
+    width: 100%;
+    grid-area: 1/ 1/ 2/ 2;
+}
+
+canvas{
+    position: relative;
+    height: 32vh;
+    width: 32vh;
+    top: -.8rem;
+    left: -.5rem;
+}
+
+.tempcont{
+    background-color: #560f15;
+    border: 1px solid green;
+    grid-area: 1/ 2/ span 1 /4;
+}
+
+.notepadcont{
+    grid-area: 2/ 1/ span 1/ span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #210324;
+    height: 100%;
+    width: 100%;
+}
+
+h3{
+    color:#ffbe31;
+    font-size: 2rem;
+}
+
+textarea{
+    border: none;
+    width: 96%;
+    height: 90%;
+    background-color: #210324;
+    color: skyblue;
+    font-size: 1rem;
+}
+
+textarea:focus{
+    outline: none;
+}
