@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="logcont">
-        <div class="stopwatchcont">
+        <div class="stopwatchcont cont">
             <div class="currtime" id="displaytime">00:00:00:00</div>
             <div class="buttons">
                 <button class="start btnformat" id="start">Start</button>
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="logtablecont">
+        <div class="cont logtablecont">
             
             <div class="logtable">
                 <div class="logtitle">Logs</div>
@@ -29,7 +29,7 @@
                 <div class="log" id="log4"> 4.  <div id="logtext"></div> <button id="clearlog4"></button></div>
                 <div class="log" id="log5"> 5.  <div id="logtext"></div> <button id="clearlog5"></button></div>
             </div>
-
+            
             <div class="logbuttons">
                 <button class="clear btnformat" id="clear">Clear</button>
                 <div class="total" id="total"></div>
@@ -44,9 +44,28 @@
             <canvas class="canvas" id="canvas"></canvas>
         </div>
 
-        <div class="tempcont" id="tempcont"></div>
+        <div class="cont tempcont" id="tempcont">
+            <div class="tempinfo">
+                <div class="citycont">
+                    <div id= "citycou" class="citycountry"></div>
+                    <div id= "daydate" class="daydate"></div>
+                </div>
+                <div class="tempcel">
+                    <h2 id="tempcel"></h2>
+                    <h6 id="feelslike"></h6>
+                </div>
+                <div id= "windinf" class="windinfo">
+                    <div class="windy" id="windy"></div>
+                    <div class="rainy" id="rainy"></div>
+                    <div class="humid" id="humid"></div>
+                </div>
+            </div>
+            <div class="imgcont">
+                <img id="tempimg">
+            </div>
+        </div>
 
-       <div class="notepadcont" id="notepadcont"> 
+       <div class="cont notepadcont" id="notepadcont"> 
             <h3>notepad</h3>
             <textarea id="textarea"></textarea>
         </div>
@@ -54,6 +73,7 @@
     
     <script type="module" src="time.js"></script>
     <script type="module" src="clock.js"></script>
+    <script type="text/javascript" src="svgNAME.json"></script>
     <script type="module" src="js.js"></script>
 </body>
 </html>

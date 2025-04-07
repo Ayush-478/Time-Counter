@@ -11,12 +11,18 @@ html{
 body{
     width: 100;
     height: 100%;
-    background-color: #560f15;
+    background-color:#dddddd;
     display: flex;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
     justify-content: space-around;
     flex-wrap: nowrap;
+}
+
+.cont{
+    box-shadow: 11px 11px 20px 7px #363605,
+    -3px -3px 1px 4px white;
+    border: 2.5px solid #363605 !important;
 }
 
 .logcont{
@@ -32,8 +38,8 @@ body{
 }
 
 .stopwatchcont{
-    background-color: #ffbe31;
-    border: 1px solid palevioletred;
+    background-color: #000000;
+    border: 3px solid #fffc58;
     width: 102%;
     height: 34%;
     display: flex;
@@ -45,7 +51,7 @@ body{
 .currtime{
     font-size: 5.5vw;
     text-align: center;
-    color: #31112c;
+    color: #ff5680;
     width: 100%;
     position: relative;
     bottom: -5%;
@@ -62,6 +68,7 @@ body{
     width:33%;
     position: relative;
     top: -70%;
+    background-color: #c93030;
 }
 
 .start{
@@ -84,7 +91,7 @@ body{
 .logtablecont{    /*contains log table, clear and total*/
     height: 62%;
     width: 100%;
-    border: 1px solid skyblue;
+    border: 3px solid #fffc58;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -93,17 +100,19 @@ body{
 .logtitle{
     font-size: 3vw;
     font-weight: 500;
-    color: #210324;
+    color: #ff5680;
     text-align: center;
 }
 
 .logtable{
-    background-color: #ffbe31;
+    background-color: #000000;
     grid-area: 3/1/ span 1/ span 3;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+    padding-left: .6rem;
+    padding-right: .6rem;
 }
 
 .log{
@@ -111,8 +120,10 @@ body{
     padding-left: 1rem;
     padding-right: 1rem;
     display: flex;
+    border: 1px solid #c93030;
     align-items: center;
     font-size: 1.65vw;
+    color: #fffc58;
 }
 
 .log > div{
@@ -123,47 +134,50 @@ body{
 .log > button{
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #5d1861;
+    background-color: #ff5680;
 }
 
 .logbuttons{                /*clear and total*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffbe31;
+    background-color: #000000;
     height: 18%;
+    
 }
 
 .clear{
     font-weight: 500;
-    font-size: 2.5vw;
-    background-color: #210324;
+    font-size: 2vw;
+    background-color: #c93030;
     color: #fbdcc4;
-    height: 85%;
-    width: 33%;
+    height: 68%;
+    width: 35%;
     border: none;
     position: relative;
-    top: -18%;
+    top: -8%;
     right: -4%;
 }
 
 .total{
-    font-weight: 500;
+    font-weight: 700;
     font-size: 2.5vw;
-    background-color: #210324;
-    color: white;    
-    height: 85%;
-    width: 45%;
+    background-color: #c93030;
+    color: black;
+    height: 68%;
+    width: 50%;
     text-align: center;
     position: relative;    
     left: -4%;
-    top: -18%;
-
+    top: -8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .notescont{ 
     width: 61.5%; /*formerly, 63%*/
-    height: 92%;
+    height: 97%;
     display: grid;
     grid-template-rows: 1.34fr 2.66fr;
     grid-template-columns: repeat(3,1fr);
@@ -171,47 +185,132 @@ body{
 }
 
 .clockcont{
+    position: relative;
+    left: -.5rem;
     height: 100%;
     width: 100%;
     grid-area: 1/ 1/ 2/ 2;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 
 canvas{
-    position: relative;
     height: 32vh;
     width: 32vh;
-    top: -.8rem;
-    left: -.5rem;
-}
+}       
 
 .tempcont{
-    background-color: #560f15;
-    border: 1px solid green;
+    background-color: #000000;
+    height: 90%;
+    width: 108%;
+    position: relative;
+    left: -7%;
+    border: 3px solid #fffc58;
     grid-area: 1/ 2/ span 1 /4;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
 }
 
-.notepadcont{
-    grid-area: 2/ 1/ span 1/ span 3;
+.imgcont{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    top: -.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: #210324;
-    height: 100%;
+    justify-content: space-between;
+}
+
+img{
     width: 100%;
+    height: 100%;
+}
+
+.tempinfo{
+    width: 60%;
+    position: relative;
+    right: -1rem;
+    color:white;
+    display: grid;
+    grid-template-rows: 1.3fr 2.7fr;
+    grid-template-columns: 3fr 2fr;
+}
+
+.tempinfo > div{
+    color: white;
+}
+
+.citycont{
+    grid-area: 1 /1/span 1 / span 1;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tempcel{
+    grid-area: 2/1/span 1/ span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -.5rem;   
+}
+
+h2{
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+h6{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.windinfo{
+    grid-area: 1/2/span 2/ span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.windinfo > div{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: .4rem;
+}
+
+.notepadcont{
+    display: flex;
+    grid-area: 2/ 1/ span 1/ span 3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000000;
+    border: 3px solid #fffc58;
+    height: 93%;
+    width: 100%;
+    position: relative;
+    bottom: -.2rem;
 }
 
 h3{
-    color:#ffbe31;
     font-size: 2rem;
+    color: #ff5680;
 }
 
 textarea{
     border: none;
     width: 96%;
     height: 90%;
-    background-color: #210324;
-    color: skyblue;
+    background-color:#000000;
+    color: #ff5680;
+    font-weight: 400;
     font-size: 1rem;
 }
 

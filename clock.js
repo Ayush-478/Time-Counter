@@ -11,7 +11,9 @@ const w = canvas.offsetWidth;
 canvas.height = h;
 canvas.width = w;
 
-console.log(h,w)
+const clockcont = document.getElementById('clockcont');
+clockcont.setAttribute("style", `width: ${w}px; height : ${h}px;`);
+
 
 ctx.fillStyle = "lavender";
 const pi = Math.PI;
@@ -119,4 +121,4 @@ TimeCalc.clocktimer.edit(hours,minutes,seconds,0);
 setInterval(()=>{
     updateClock();
     calc.add(TimeCalc.clocktimer, sec);
-},1000);
+},1000); 
